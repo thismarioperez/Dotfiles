@@ -21,6 +21,7 @@ install_brew_packages() {
     if [ -x "$(command -v brew)" ]; then
         echo -e "${Cya}Installing packages from Brewfile${NC}"
         brew bundle --file Brewfile
+        mkdir $HOME/nvm # Make nvm directory
     else
         # Alert user to install homebrew and stop script
         echo -e "${Red}Please install Homebrew, then re-run this script!${NC}"
