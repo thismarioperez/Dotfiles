@@ -69,7 +69,7 @@ setup_dotfiles() {
 }
 
 # Test to see if zsh is installed.  If it is:
-if [ -n "${ZSH_VERSION}" ]; then
+if [[ "$SHELL" == *"zsh"* ]]; then
     # assume Zsh
     setup_olddir
     install_ohmyzsh
