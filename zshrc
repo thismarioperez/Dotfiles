@@ -75,7 +75,7 @@ ZSH_CUSTOM="$HOME/Repositories/Dotfiles/custom"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-  git vscode zsh-autosuggestions
+  git vscode
 )
 
 source $ZSH/oh-my-zsh.sh
