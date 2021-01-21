@@ -7,7 +7,7 @@ fzcd() {
 # Git
 # Search through all available branches and check out selected
 fzgco() {
-    git checkout “$(git branch — all | fzf | tr -d ‘[:space:]’)”
+    git checkout $(git branch -a | fzf)
 }
 
 # Homebrew
