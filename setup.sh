@@ -13,7 +13,7 @@
 ################################################################################
 dir=${PWD}             # dotfiles directory
 olddir=$HOME/.dotfiles_old # old dotfiles backup directory
-files=".zshrc"         # list of files/folders to symlink in homedir
+files="zshrc"         # list of files/folders to symlink in homedir
 NC='\033[0m'           # No Color
 Cya='\033[0;36m'       # Cyan
 Red='\033[0;31m'       # Red
