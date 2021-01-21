@@ -96,7 +96,6 @@ cask "vlc"
 cask "whatsapp"
 cask "xquartz"
 cask "zeplin"
-mas "1Password 7", id: 1333542190
 mas "Drawful 2", id: 1121426744
 mas "GarageBand", id: 682658836
 mas "iMovie", id: 408981434
