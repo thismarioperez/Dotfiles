@@ -11,14 +11,9 @@
 ################################################################################
 # Variables
 ################################################################################
-dir=${PWD}             # dotfiles directory
+dir=${PWD}                 # dotfiles directory
 olddir=$HOME/.dotfiles_old # old dotfiles backup directory
-files="zshrc"         # list of files/folders to symlink in homedir
-NC='\033[0m'           # No Color
-Cya='\033[0;36m'       # Cyan
-Red='\033[0;31m'       # Red
-Gre='\033[0;32m'       # Green
-Whi='\033[1;37m'       # White
+files="zshrc"              # list of files/folders to symlink in homedir
 
 ################################################################################
 # Functions
@@ -74,18 +69,20 @@ setup_dotfiles() {
     done
 }
 
-# Test to see if zsh is installed.  If it is:
-if [[ "$SHELL" == *"zsh"* ]]; then
-    # assume Zsh
-    setup_olddir
-    install_packages
-    setup_dotfiles
-    echo -e "${Gre}Dotfiles setup complete.${NC} 🎉"
-    exit
-else
-    # assume something else
-    # Alert user to install zsh and stop script
-    echo -e "${Red}Please install zsh, then re-run this script!${NC}"
-    echo -e "${Whi}Visit${NC} ${Cya}https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH${NC} ${Whi}for installation instructions.${NC}"
-    exit 1
-fi
+setup() {
+    # Test to see if zsh is installed.  If it is:
+    if [[ "$SHELL" == *"zsh"* ]]; then
+        # assume Zsh
+        setup_olddir
+        install_packages
+        setup_dotfiles
+        echo -e "${Gre}Dotfiles setup complete.${NC} 🎉"
+        exit
+    else
+        # assume something else
+        # Alert user to install zsh and stop script
+        echo -e "${Red}Please install zsh, then re-run this script!${NC}"
+        echo -e "${Whi}Visit${NC} ${Cya}https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH${NC} ${Whi}for installation instructions.${NC}"
+        exit 1
+    fi
+}

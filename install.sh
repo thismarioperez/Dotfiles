@@ -3,13 +3,8 @@
 # install.sh
 # This script installs brew packages from Brefile
 ################################################################################
-################################################################################
-# Variables
-################################################################################
-NC='\033[0m'     # No Color
-Cya='\033[0;36m' # Cyan
-Red='\033[0;31m' # Red
-Whi='\033[1;37m' # White
+source ${PWD}/variables.sh
+source ${PWD}/setup.sh
 ################################################################################
 # Functions
 ################################################################################
@@ -23,6 +18,7 @@ install_brew_packages() {
         brew bundle --file Brewfile
         $(brew --prefix)/opt/fzf/install # Install fzf key bindings and fuzzy complete
         mkdir $HOME/nvm # Make nvm directory
+        setup
     else
         # Alert user to install homebrew and stop script
         echo -e "${Red}Please install Homebrew, then re-run this script!${NC}"
