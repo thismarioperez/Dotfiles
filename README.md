@@ -1,10 +1,19 @@
 # Dotfiles - thismarioperez
 ## Installation
 1. Install [Homebrew](https://https://brew.sh/).
-2. Clone this repository into `~/Repositories` then run `install.sh`.
+2. Clone this repository into `~/Repositories`.
+3. Depending on what environment you'll be on (work or personal), run one of the following commands from your terminal:
+
+For Personal Use:
 ```
 mkdir ~/Repositories && cd ~/Repositories && git clone https://github.com/thismarioperez/Dotfiles.git && cd Dotfiles && chmod 755 ./install.sh && ./install.sh
 ```
+
+For Work Use:
+```
+mkdir ~/Repositories && cd ~/Repositories && git clone -b work https://github.com/thismarioperez/Dotfiles.git && cd Dotfiles && chmod 755 ./install.sh && ./install.sh
+```
+
 ## Misc
 ### Night Owl - My preferred theme for everything
 [Night Owl for vscode](https://github.com/sdras/night-owl-vscode-theme)
