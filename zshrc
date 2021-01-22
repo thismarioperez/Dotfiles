@@ -10,9 +10,6 @@ source $(brew --prefix nvm)/nvm.sh
 # Path to brew installed zsh-autosuggestions for oh-my-zsh
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
-# Path to brew installed zsh-syntax-highlighting
-source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
 # Path to fzf keybindings and fuzzy autocompletion if it exists
 export FZF_DEFAULT_COMMAND="fd . $HOME"
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
@@ -114,3 +111,7 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# Path to brew installed zsh-syntax-highlighting
+# NOTE: This must be included last for highlighting to work correctly
+source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
