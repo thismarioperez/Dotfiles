@@ -1,14 +1,4 @@
 # fzf custom functions
-# File navigation
-# @see http://ix.io/2hgn
-fzcd() {
-    cd $HOME && cd "$(fd -t d | fzf --preview="tree -L 1 {}" --bind="space:toggle-preview" --preview-window=:hidden)" && echo "$PWD"
-}
-# Git
-# Search through all available branches and check out selected
-fzgco() {
-    git checkout $(git branch -a | fzf)
-}
 
 # Homebrew
 # @see https://medium.com/better-programming/boost-your-command-line-productivity-with-fuzzy-finder-985aa162ba5d#e100
