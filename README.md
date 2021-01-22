@@ -1,4 +1,7 @@
 # Dotfiles - thismarioperez
+
+![Preview](preview.gif)
+
 ## Installation
 1. Install [Homebrew](https://https://brew.sh/).
 2. Clone this repository into `~/Repositories`.
