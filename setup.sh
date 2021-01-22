@@ -27,7 +27,7 @@ Whi='\033[1;37m'       # White
 # Alert User when done
 ################################################################################
 process_done() {
-    echo -e "${Gre}...done${NC}👍"
+    echo -e "${Gre}...done${NC} 🤘"
 }
 
 ################################################################################
@@ -39,10 +39,16 @@ setup_olddir() {
     process_done
 }
 
-################################################################################
-# Run oh-my-zsh installer
-################################################################################
-install_ohmyzsh() {
+install_packages() {
+    # fzf-tab plugin
+    echo -e "${Cya}Downloading fzf-tab plugin and installing in plugins directory...${NC}"
+    git clone https://github.com/Aloxaf/fzf-tab custom/plugins/fzf-tab
+    process_done
+    # custom zsh theme
+    echo -e "${Cya}Downloading zsh theme and installing in themes directory...${NC}"
+    curl -o $dir/custom/themes/thismarioperez.zsh-theme https://raw.githubusercontent.com/thismarioperez/thismarioperez-zsh-theme/main/thismarioperez.zsh-theme
+    process_done
+    # oh-my-zsh installer
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
     process_done
 }
@@ -72,9 +78,9 @@ setup_dotfiles() {
 if [[ "$SHELL" == *"zsh"* ]]; then
     # assume Zsh
     setup_olddir
-    install_ohmyzsh
+    install_packages
     setup_dotfiles
-    echo -e "${Gre}Dotfiles setup complete.${NC}"
+    echo -e "${Gre}Dotfiles setup complete.${NC} 🎉"
     exit
 else
     # assume something else

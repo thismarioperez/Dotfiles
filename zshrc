@@ -13,6 +13,9 @@ source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 # Path to brew installed zsh-syntax-highlighting
 source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
+# Path to fzf keybindings and fuzzy autocompletion if it exists
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
@@ -75,7 +78,7 @@ ZSH_CUSTOM="$HOME/Repositories/Dotfiles/custom"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-  git vscode
+  fzf fzf-tab git vscode
 )
 
 source $ZSH/oh-my-zsh.sh

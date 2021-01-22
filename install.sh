@@ -21,6 +21,7 @@ install_brew_packages() {
     if [ -x "$(command -v brew)" ]; then
         echo -e "${Cya}Installing packages from Brewfile${NC}"
         brew bundle --file Brewfile
+        $(brew --prefix)/opt/fzf/install # Install fzf key bindings and fuzzy complete
         mkdir $HOME/nvm # Make nvm directory
     else
         # Alert user to install homebrew and stop script
