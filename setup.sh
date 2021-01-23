@@ -13,7 +13,7 @@
 ################################################################################
 dir=${PWD}                 # dotfiles directory
 olddir=$HOME/.dotfiles_old # old dotfiles backup directory
-files="zshrc"              # list of files/folders to symlink in homedir
+files="vimrc zshrc"        # list of files/folders to symlink in homedir
 
 ################################################################################
 # Functions
@@ -86,3 +86,5 @@ setup() {
         exit 1
     fi
 }
+
+setup
