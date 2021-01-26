@@ -7,12 +7,17 @@
 2. Clone this repository into `~/Repositories`.
 3. Depending on what environment you'll be on (work or personal), run one of the following commands from your terminal:
 
-For Personal Use:
+For Personal MacOs Use:
 ```
 mkdir ~/Repositories && cd ~/Repositories && git clone https://github.com/thismarioperez/Dotfiles.git && cd Dotfiles && chmod 755 ./install.sh && ./install.sh
 ```
 
-For Work Use:
+For Personal Linux Use:
+```
+mkdir ~/Repositories && cd ~/Repositories && git clone -b linux https://github.com/thismarioperez/Dotfiles.git && cd Dotfiles && chmod 755 ./install.sh && ./install.sh
+```
+
+For Work MacOs Use:
 ```
 mkdir ~/Repositories && cd ~/Repositories && git clone -b work https://github.com/thismarioperez/Dotfiles.git && cd Dotfiles && chmod 755 ./install.sh && ./install.sh
 ```
