@@ -35,14 +35,6 @@ setup_olddir() {
 }
 
 install_packages() {
-    # fzf-tab plugin
-    echo -e "${Cya}Downloading fzf-tab plugin and installing in plugins directory...${NC}"
-    git clone https://github.com/Aloxaf/fzf-tab custom/plugins/fzf-tab
-    process_done
-    # custom zsh theme
-    echo -e "${Cya}Downloading zsh theme and installing in themes directory...${NC}"
-    curl -o $dir/custom/themes/thismarioperez.zsh-theme https://raw.githubusercontent.com/thismarioperez/thismarioperez-zsh-theme/main/thismarioperez.zsh-theme
-    process_done
     # oh-my-zsh installer
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
     process_done
