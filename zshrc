@@ -1,5 +1,5 @@
 # If you come from bash you might have to change your $PATH.
-export PATH="$HOME/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:node_modules/.bin:./node_modules/.bin:$PATH"
+export PATH="$HOME/bin:/home/linuxbrew/.linuxbrew/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:node_modules/.bin:./node_modules/.bin:$PATH"
 
 # Path to nvm directory
 export NVM_DIR="$HOME/.nvm"
