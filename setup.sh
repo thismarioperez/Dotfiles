@@ -78,5 +78,3 @@ setup() {
         exit 1
     fi
 }
-
-setup
